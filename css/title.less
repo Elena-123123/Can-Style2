@@ -1,0 +1,72 @@
+// main: style.less
+
+.title-primery {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 23px;
+    color: @titleColor;
+    margin-top: 20px;
+}
+.title-secondary {
+    font-weight: 400;
+font-size: 32px;
+line-height: 31px;
+color: @titleColor;
+margin-bottom: 15px;
+}
+.title-secondary::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.138);
+    margin-top: 10px;
+    margin-left: -5px;
+}
+.subtitle-primery { 
+    font-weight: 400;
+font-size: 30px;
+line-height: 22px;
+color: @titleColor;
+margin-bottom: 30px;
+}
+
+.future-title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 31px;
+    color: @subtitleColor;
+    padding: 50px 0px 20px 0px;
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 73%;
+        height: 1px;
+        background-color: @secondaryColor;
+        margin-top: 10px;
+    }
+}
+
+.work-title {
+    color: @titleColor;
+    &::after {
+        content: '';
+         display: block;
+         width: 80%;
+         background-color: @titleColor;
+    }
+}
+.work-price-title {
+    color: @titleColor;
+}
+
+@media(max-width:767px) {
+    .title-secondary {
+        font-size: calc(25px + 7 * (100vw / 1220));
+    }
+    .subtitle-primery {
+        font-size: calc(20px + 10 * (100vw / 1220)); 
+    }   
+}
